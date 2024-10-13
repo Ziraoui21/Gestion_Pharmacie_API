@@ -34,7 +34,7 @@ class Medicament extends Model
 
     public function factures()
     {
-        return $this->belongsToMany(Facture::class,"medicament_facture",)->withPivot([
+        return $this->belongsToMany(Facture::class,"medicament_facture")->withPivot([
             'qte',
             'created_at'
         ]);
